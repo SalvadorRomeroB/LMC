@@ -2,9 +2,6 @@ body{
     font-size: 20px;
 }
 
-
-
-
 .column {
     float: left;
     padding: 10px;
@@ -29,8 +26,20 @@ body{
 input{
     width: 60px;
     height: 30px;
-    margin: 3px;
-    
+    margin: 3px;   
+}
+input[type = 'checkbox']{
+	display: inline-block;
+	-webkit-appearance:none;
+    width:25px;
+    height:25px;
+    background:white;
+    border-radius:5px;
+	border:2px solid #555;
+	margin-top: 20px;
+}
+input[type='checkbox']:checked {
+    background: #23395e;
 }
 .myButton {
 	-moz-box-shadow:inset 0px 0px 15px 3px #23395e;
@@ -56,6 +65,7 @@ input{
 	padding:6px 13px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #263666;
+	margin: 2px;
 }
 .myButton:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #415989), color-stop(1, #2e466e));
