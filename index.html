@@ -11,15 +11,6 @@
     <title>LittleManComputer</title>
 </head>
 <body onload="appendText()">
-        <script>
-                $('input').keydown(function(){
-            var self = $(this);
-             
-            var removedText = self.val().replace(/[^0-9]/, '');
-             
-            self.val(removedText);
-         });
-            </script>
     <div>
         <h1 style="text-align: center">LittleManComputer</h1>
     </div>
@@ -44,9 +35,8 @@
             <button class="myButton" onclick="run()">Run</button>
             <br>
             <div>
-                <label> <input type="number" placeholder= " Mailbox"> <input type="checkbox" name="checkbox" value="value"> </label>
-                <br><br><br><br><br><br><br><br><br><br><br><br>
-                <button id="reset" class="myButton" onClick="window.location.reload()">Reset</button>
+                <label> <input type="number" placeholder= " Mailbox" id="mbox"> <input type="checkbox" name="checkbox" id="chbox"> </label>                <br><br><br><br><br><br><br><br><br><br><br><br>
+                <button id="reset" class="myButton" onClick="resetbtn()">Reset</button>
             </div>
         </div>
     </div>
