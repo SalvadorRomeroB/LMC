@@ -42,6 +42,7 @@ const redexBNums = () => {
         // }
      });
 } 
+
 const resetbtn = () => {
     calculator = 0;
     counter = 0;
