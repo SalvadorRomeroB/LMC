@@ -11,10 +11,18 @@
     <title>LittleManComputer</title>
 </head>
 <body onload="appendText()">
+        <script>
+                $('input').keydown(function(){
+            var self = $(this);
+             
+            var removedText = self.val().replace(/[^0-9]/, '');
+             
+            self.val(removedText);
+         });
+            </script>
     <div>
         <h1 style="text-align: center">LittleManComputer</h1>
     </div>
-    
 
     <div class="row">
       <div class="column left">
