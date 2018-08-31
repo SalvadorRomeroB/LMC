@@ -49,13 +49,3 @@ const regexBNums = (inp) => {
         }
      });
 } 
-function validar(el){
-    var regex = /[a-z]/gi;
-    el.value = el.value.replace(regex,"");
-
-    if(el.value[0] == "-"){
-        el.maxLength = 4;
-    }else{
-        el.maxLength = 3;
-    }
-};
