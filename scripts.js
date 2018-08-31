@@ -22,6 +22,7 @@ const ouputGrow = () => {
     document.getElementById("outputBox").value = outputL;
     outputL.push(calculator); 
     var out = document.createElement("input");
+
     out.disabled = true
     out.style.border = '4px solid #23395e';
     out.style.borderRadius = '5px';
