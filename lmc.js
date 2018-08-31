@@ -1,5 +1,3 @@
-
-
 var calculator = 0;
 var counter = 0;
 var content = "";
@@ -26,12 +24,12 @@ function run(){
         // Print state
         console.log("--- Calculator: " + calculator + " : Counter: " + counter);
         document.getElementById("counterBox").value = counter;
-        document.getElementById("calculatorBox").value = calculator;
-        calcHelper();
+        calcHelper(); // Update color and value of calculator
 
         // Fetch instruction
         content = String(program[counter].value);
         console.log("Content: " + content);
+
         // Excecute instruction
         if(flag){
             excecute(content, program);
@@ -39,7 +37,8 @@ function run(){
             flag = true;
             break;
         }
-        
+        // Update color of calculator
+        calcHelper();
 
     }while(content != HALT);
 
@@ -74,9 +73,7 @@ function runStep(){
     // Print state
     console.log("--- Calculator: " + calculator + " : Counter: " + counter);
     document.getElementById("counterBox").value = counter;
-    document.getElementById("calculatorBox").value = calculator;
-
-
+    calcHelper(); // Update color and value of calculator
 
     // Fetch instruction
     content = String(program[counter].value);
@@ -113,7 +110,7 @@ function interruptSTO(program, ncounter){
 // Used to load the state after an interruption
 function interruptLOAD(program){
     // Load counter value
-    counter = program[98].value;
+    counter = program[98].value - 1;
 
     // Load calculator value
     calculator = program[99].value;
@@ -128,8 +125,8 @@ function reset(){
     counter = 0;
     document.getElementById("counterBox").value = counter;
     document.getElementById("calculatorBox").value = calculator;
-    document.getElementById('calcFlag').checked = true;
     $("#stepBtn").prop('disabled', false);
+    document.getElementById("calcFlag").checked = true;
     document.getElementById("message").innerHTML = "Calculator, counter and output box set to zero. "
 }
 
@@ -143,8 +140,6 @@ function calcHelper(){
         document.getElementById("calculatorBox").value = calculator;
     }
 }
-
-
 
 // Excecute
 function excecute(content, program){
@@ -232,6 +227,7 @@ function excecute(content, program){
         
 
     }
+
     // Increment counter
     counter++;
 }

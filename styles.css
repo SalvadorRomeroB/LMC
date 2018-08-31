@@ -17,7 +17,7 @@ body{
 
 .middle {
   width: 60%;
-  height: 420px;
+  height: 450px;
   background: #eee;
 }
 
@@ -109,8 +109,8 @@ input{
   height: 40px;
   cursor: pointer;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background: #2e466e;
   border-radius: 5px;
   position: relative;
@@ -137,7 +137,7 @@ input{
   position: absolute;
   top: 50%;
   -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
   fill: #fff;
   -webkit-transition: all .35s;
   transition: all .35s;
