@@ -1,4 +1,5 @@
-var outputL = [];
+
+//Create Mailboxes Function
 
 const appendText =() => {
     for(i=0; i<100; i++){
@@ -6,7 +7,7 @@ const appendText =() => {
 
        if(document.createElement("input"))
        inp.maxLength = '3';
-      redexBNums();
+      regexBNums();
 
 
        if(i < 10){
@@ -18,6 +19,7 @@ const appendText =() => {
     }
    }
 
+   // Create multiple Outputs
 const ouputGrow = () => {
     document.getElementById("outputBox").value = outputL;
     outputL.push(calculator); 
@@ -29,21 +31,12 @@ const ouputGrow = () => {
     out.value = outputL[outputL.length-1];
 }
 
-const redexBNums = () => {
+// RegEx Validate Input
+const regexBNums = () => {
 
     $('input').keydown(function(){
         var self = $(this);
         var removedText = self.val().replace(/[a-z]/gi, '');
         self.val(removedText);
-        // if(inp.value[0] == "-"){
-        //     inp.maxLength = 4;
-        // }else{
-        //     inp.maxLength = 3;
-        // }
      });
 } 
-
-const resetbtn = () => {
-    calculator = 0;
-    counter = 0;
-}
