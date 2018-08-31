@@ -4,12 +4,11 @@
 const appendText =() => {
     for(i=0; i<100; i++){
        var inp = document.createElement("input");
-
        if(document.createElement("input"))
+       inp.onkeyup = function validNegatives(){
+        regexBNums(this);
+       }
        inp.maxLength = '3';
-      regexBNums();
-
-
        if(i < 10){
        inp.setAttribute('placeholder', '00'+i);
        }else{
@@ -29,14 +28,34 @@ const ouputGrow = () => {
     out.style.borderRadius = '5px';
     $("#outputBox").after(out).value = outputL[outputL.length]; 
     out.value = outputL[outputL.length-1];
+    //Delete Output Boxes
+    $("#reset").click(function(){
+        $(out).remove();
+    });
 }
 
 // RegEx Validate Input
-const regexBNums = () => {
+const regexBNums = (inp) => {
 
     $('input').keydown(function(){
         var self = $(this);
         var removedText = self.val().replace(/[a-z]/gi, '');
         self.val(removedText);
+
+        if(inp.value[0] == "-"){
+            inp.maxLength = 4;
+        }else{
+            inp.maxLength = 3;
+        }
      });
 } 
+function validar(el){
+    var regex = /[a-z]/gi;
+    el.value = el.value.replace(regex,"");
+
+    if(el.value[0] == "-"){
+        el.maxLength = 4;
+    }else{
+        el.maxLength = 3;
+    }
+};
