@@ -1,6 +1,5 @@
 
 //Create Mailboxes Function
-
 const appendText =() => {
     for(i=0; i<100; i++){
        var inp = document.createElement("input");

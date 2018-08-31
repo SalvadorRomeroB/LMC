@@ -26,7 +26,8 @@
         <p>Input: <input type="text" id="inputBox" maxlength="3"></p>
 
         <p>Counter: <input type="text" disabled id="counterBox"></p>
-        <label>Calculator: <input disabled type="text"  id="calculatorBox"></label>
+        <label>Calculator: <input disabled type="text"  id="calculatorBox"> <input style="position:absolute; top:267px" disabled checked type="checkbox" name="flag" class="error" />
+        </label>
         <br>
         <div style="background: #eee;">
                 <p id="outputBox">Output:</p>
@@ -49,7 +50,7 @@
 
         <!-- Interrupt custom checkbox/ Mailbox Jump -->
 
-                <label> <input  style="width: 70px;" type="number" placeholder= " Mailbox" id="mbox" maxlength="3"> 
+                <label> <input  style="width: 70px;" type="number" placeholder= " Mailbox" id="mbox"> 
                     <div class="switch_box box_4">
                         <div class="input_wrapper">
                             <input id="chbox" type="checkbox" class="switch_4">
@@ -67,10 +68,16 @@
          <!-- Reset Buttons -->
 
                 <button id="reset" class="myButton" onClick="reset()">Reset</button>
-                <button id="resetAll" class="myButton" onClick="window.location.reload(false);">Reset All</button>
+                <button id="resetAll" class="myButton" onClick="window.location.reload(false)">Reset All</button>
             </div>
         </div>
     </div>
+    <div class="row">
+            <div class="column left"></div>
+            <div class="column middle">
+                <p><b>Announcement:</b> <span id="message"></span> </p>
+            </div>
+        </div>
 
 </body>
 </html>
